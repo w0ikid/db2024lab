@@ -46,8 +46,8 @@ SELECT warehouse, COUNT(*) FROM Boxes
 GROUP BY warehouse;
 
 SELECT warehouse, COUNT(*) FROM Boxes
-WHERE warehouse > 2
-GROUP BY warehouse;
+GROUP BY warehouse
+HAVING COUNT(warehouse) > 2
 
 INSERT INTO Warehouses (location, capacity) 
 VALUES ('New York', 3);
@@ -72,7 +72,7 @@ WHERE value < 150;
 -- RETURNING *;
 -- 
 
-DELETE FROM Boxes WHERE warehouse = (SELECT code FROM Warehouses WHERE location = 'New York' LIMIT 1)
+DELETE FROM Boxes WHERE warehouse IN (SELECT code FROM Warehouses WHERE location = 'New York' )
 RETURNING *;
 
 SELECT code, location FROM Boxes;
