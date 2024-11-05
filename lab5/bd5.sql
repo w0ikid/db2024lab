@@ -47,7 +47,8 @@ SELECT SUM(purch_amt) FROM orders;
 SELECT AVG(purch_amt) FROM orders;
 
 
-SELECT COUNT(cust_name) FROM customers;
+SELECT COUNT(cust_name) FROM customers
+
 
 
 SELECT MIN(purch_amt) FROM orders;
@@ -76,3 +77,19 @@ SELECT * FROM customers WHERE cust_name IS NOT NULL;
 
 
 SELECT MAX(grade) FROM customers;
+
+
+CREATE TABLE salesmen (
+    salesman_id INTEGER PRIMARY KEY,
+    name VARCHAR(255),
+    city VARCHAR(255),
+    commission DOUBLE PRECISION
+);
+
+INSERT INTO salesmen (salesman_id, name, city, commission) VALUES
+    (5001, 'James Hoog', 'New York', 0.15),
+    (5002, 'Nail Knite', 'Paris', 0.13),
+    (5005, 'Pit Alex', 'London', 0.11),
+    (5006, 'Mc Lyon', 'Paris', 0.14),
+    (5003, 'Lauson Hen', 'Paris', 0.12),
+    (5007, 'Paul Adam', 'Rome', 0.13);
