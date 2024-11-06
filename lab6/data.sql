@@ -22,6 +22,9 @@ INSERT INTO departments (department_name, budget, location_id) VALUES
 ('Operations', 130000, 9),
 ('Engineering', 180000, 10);
 
+INSERT INTO departments (department_id, department_name, budget, location_id)
+VALUES (80, 'Finance', 500000, 3);
+
 INSERT INTO employees (first_name, last_name, email, phone_number, salary, department_id) VALUES
 ('Alice', 'Smith', 'alice.smith@example.com', '123-456-7890', 60000, 1),
 ('Bob', 'Brown', 'bob.brown@example.com', '234-567-8901', 80000, 2),
@@ -48,3 +51,6 @@ INSERT INTO employees (first_name, last_name, email, phone_number, salary, depar
 INSERT INTO departments (department_name, budget, location_id) VALUES
 ('Procurement', 95000, 3),  -- Отдел закупок, без сотрудников
 ('Quality Assurance', 85000, 6);  -- Отдел качества, без сотрудников
+
+INSERT INTO employees (first_name, last_name, email, phone_number, salary, department_id) 
+VALUES ('John', 'Doe', 'john.doe@example.com', '123-456-7890', 75000, 80);

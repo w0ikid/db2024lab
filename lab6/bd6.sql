@@ -34,8 +34,7 @@ JOIN departments ON employees.department_id = departments.department_id
 SELECT first_name, last_name, employees.department_id, departments.department_name
 FROM employees
 JOIN departments ON employees.department_id = departments.department_id
--- WHERE employees.department_id IN (80, 40);
-AND departments.department_id IN (80, 40);
+WHERE departments.department_id IN (80, 40);
 
 -- 5
 SELECT first_name, last_name, departments.department_name, locations.city, locations.state_province
