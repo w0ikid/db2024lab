@@ -1,7 +1,5 @@
--- Create database
 CREATE DATABASE lab7;
 
--- Create tables
 CREATE TABLE countries (
     country_id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL
@@ -71,29 +69,29 @@ ON employees ((substring(name FROM 1 FOR 4)));
 CREATE INDEX idx_employees_department_id_salary ON employees (department_id, salary);
 CREATE INDEX idx_departments_budget ON departments (budget);
 
--- Task 1: Select countries by name
+-- Task 1:
 SELECT * 
 FROM countries 
 WHERE name = 'China';
 
--- Task 2: Select employees by name and surname
+-- Task 2:
 SELECT * 
 FROM employees 
 WHERE name = 'Jane' 
   AND surname = 'Smith';
 
--- Task 3: Select employees with salary in a specific range
+-- Task 3:
 SELECT * 
 FROM employees 
 WHERE salary < 80000 
   AND salary > 50000;
 
--- Task 4: Select employees where the first 4 characters of the name match
+-- Task 4:
 SELECT * 
 FROM employees 
 WHERE substring(name FROM 1 FOR 4) = 'Jane';
 
--- Task 5: Select employees and their departments with specific conditions
+-- Task 5:
 SELECT e.*, d.*
 FROM employees e
 JOIN departments d
