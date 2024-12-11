@@ -108,4 +108,4 @@ HAVING count(c.customer_id) > 1;
 
 -- 9 task
 CREATE ROLE intern;
-GRANT junior_dev TO intern;
+GRANT junior_dev TO intern; 

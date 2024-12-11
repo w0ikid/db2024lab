@@ -80,7 +80,7 @@ BEGIN
     DECLARE string_result VARCHAR(100);
 
     -- Subblock 1: Numeric Computation
-    BEGIN
+    BEGIN 
         SET numeric_result = num1 * 2;
     END;
 
